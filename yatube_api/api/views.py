@@ -29,7 +29,6 @@ class PostViewSet(viewsets.ModelViewSet):
             raise PermissionDenied('Изменение чужого контента запрещено!')
         instance.delete()
 
-
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
 
