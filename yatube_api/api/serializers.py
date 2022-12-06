@@ -4,6 +4,7 @@ from posts.models import Comment, Group, Post
 
 
 class GroupSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Group
         fields = (
@@ -13,6 +14,7 @@ class GroupSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField(read_only=True)
+
     class Meta:
         model = Post
         fields = (
@@ -22,6 +24,7 @@ class PostSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField(read_only=True)
+
     class Meta:
         model = Comment
         fields = (
